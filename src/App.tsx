@@ -33,7 +33,7 @@ export const App = () => {
     useEffect(() => {
         getItemsCount().then((res) => setPagesCount(Math.ceil(res / 12)))
     }, [])
-  
+
     return (
         <div className="App">
             <Layout>
