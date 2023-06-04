@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import {App} from './App'
 import {QueryClient, QueryClientProvider} from 'react-query'
 import './css/main.scss'
+import 'react-loading-skeleton/dist/skeleton.css'
 import {ContextProvider} from './context'
 
 const root = ReactDOM.createRoot(

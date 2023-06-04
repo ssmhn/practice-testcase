@@ -1,0 +1,83 @@
+.Wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.GoBack,
+.GoNext {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.3s linear;
+	padding: 0;
+	margin-right: 8px;
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
+}
+
+.NumbersPage {
+	display: flex;
+	align-items: center;
+
+	button {
+		border: none;
+		background-color: #fff;
+		position: relative;
+		width: 24px;
+		height: 28px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		font-family: inherit;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 28px;
+		color: #999;
+		text-decoration: none;
+		transition: all 0.3s linear;
+		margin: 0 4px;
+		cursor: pointer;
+
+		&.Active {
+			color: #000;
+		}
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+.Separator {
+	width: 24px;
+	height: 28px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	color: #050505;
+	margin: 0 4px;
+}
+
+.GoBack,
+.GoNext {
+	&.Disabled {
+		pointer-events: none;
+
+		path {
+			fill: #8a94a6;
+		}
+	}
+}
+
+.GoNext {
+	margin-right: 0;
+	margin-left: 8px;
+}
