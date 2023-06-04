@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,4 +10,15 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	&:hover {
+		text-decoration:underline;
+	}
 }

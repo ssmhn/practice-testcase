@@ -3,7 +3,7 @@ import {ResponseType} from '../types/dataTypes'
 import {config} from '../config'
 
 export const getData = async (skip: number) => {
-	return axios.get<any, AxiosResponse<ResponseType[], any>, any>(`${config.BASE_URL}/datasets/3102/rows/?api_key=${config.API_KEY}&$top=${10}&$skip=${10*skip}`)
+	return axios.get<any, AxiosResponse<ResponseType[], any>, any>(`${config.BASE_URL}/datasets/3102/rows/?api_key=${config.API_KEY}&$top=${16}&$skip=${16*skip}`)
 		.then((response) => {
 			const data = response.data
 			
@@ -18,6 +18,7 @@ export const getData = async (skip: number) => {
 				
 				return {
 					...el.Cells,
+					id: el.global_id,
 					LicenseePhoneNumber: returnLicensePhoneNumber
 				}
 			})

@@ -2,6 +2,9 @@ import React, {useRef} from 'react'
 import {getData} from './api/useGetData'
 import {QueryKey, useQuery} from 'react-query'
 import {DataType} from './types/dataTypes'
+import {Layout} from "./components/global/Layout/Layout";
+import classes from "./css/App.module.scss"
+import {Item} from "./components/Item/Item";
 
 export const App = () => {
     const skip = useRef(0)
@@ -26,7 +29,15 @@ export const App = () => {
   
     return (
         <div className="App">
-            <button onClick={clickHandler}>click</button>
+            <Layout>
+                <div className={classes.Items}>
+                    {data && (
+                        data.map(el =>(
+                            <Item key={el.id} data={el}/>
+                        ))
+                    )}
+                </div>
+            </Layout>
         </div>
     );
 }
